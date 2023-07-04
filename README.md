@@ -1,7 +1,7 @@
 # Final-Project-Statistical-Modelling-with-Python
 
 ## Project/Goals
-to compile a responsive and reliable dataset from the three API with which I would be able to perform an accurate regression model that will show if my relationship hypothesis is correct. As I got into the thick of it , my goals evovlved from broader , aerial goals , to immediate specific goals like figuring out a way to request API from yelp after I had already used my quota up. ( I used a family member's email to create a a new account becasue I didnt have time for it to reset  ).  My goal was to have a greater quality and quantity of data which would allow for a better fit of the model (R squared value ) and at the same time not overfit. Since the data from both yelp and foruswuare was insuffiecnt , I could not achieve this goal , but nevertheless I gained more intuition for APIs , JSON files and coding with Python - which was really the purpose of this project.
+to compile a responsive and reliable dataset from the three API with which I would be able to perform an accurate regression model that will show if my relationship hypothesis is correct. As I got into the thick of it , my goals evovlved from broader , aerial goals , to immediate specific goals like figuring out a way to request API from yelp after I had already used my quota. ( I used a family member's email to create a a new account becasue I didnt have time for it to reset  ).  My goal was to have a greater quality and quantity of data which would allow for a better fit of the model (R squared value ) and at the same time not overfit. Since the data from both yelp and foruswuare was insufficient, I could not achieve this goal , but nevertheless I gained more intuition for APIs , JSON files and coding with Python - which was really the purpose of this project.
 
 ##Process:
 1) Api requests: chose a city for citybikes - picked Toronto where I live because knowing the context of the data helps ;)
@@ -16,7 +16,7 @@ to compile a responsive and reliable dataset from the three API with which I wou
 5)find problem and and hypothesis that will give insight to problem ie.problem = want to increase bike usage in Toronto . therefore the hypothesis I chose  determined if  there is a relatshionship b/w independant variables(ratings, distance, reviewcount , type of restaurant) and available  bikes ( want to find what lowers avialability = more users) . I did not have enough independent variables to conduct a meaningful regression analysis , so I converted the restaurants to boolean 0 or 1 values ie.is_bar (if it is then 1 if not then 0) to see if the type of venue had anything to do with available bikes. onve I added those, one by one ie. forward stepwise regression  the R Squared value rose slightly ( but still not enough)
 7)interpret regression results. All P-values were above the defined significance level of %5 excpet for is_Mexican ( meaning that there is avery low chance that a restaurant which is Mexican would have a relationship with avialble bikes if we assume the null hypothesis is true). THe R- Squared and Adjusted R Squared were both too low - meaning that the independent variables explain only ~ %4.4 of variance in available bikes . 
 
-8)idea for classification model
+8)idea for classification model: using the same indepndent variables and dependant variable y  ie. avialable bikes , the classification model would determine if the x variables can accurately predict if the amount of available bikes will be null or not ( binary) 
 
 
 ## Results
